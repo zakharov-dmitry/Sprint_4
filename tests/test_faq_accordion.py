@@ -1,4 +1,6 @@
 from selenium.webdriver.firefox import webdriver
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
 
 from pages.main_page import MainPageSamokat
 
@@ -10,7 +12,7 @@ class TestFaqAccordionAnswers:
 
     @classmethod
     def setup_class(cls):
-        cls.driver = webdriver.WebDriver()
+        cls.driver = driver = webdriver.WebDriver(service=FirefoxService(GeckoDriverManager().install()))
         cls.driver.maximize_window()
 
     def test_1st_faq_answer_is_correct(self):

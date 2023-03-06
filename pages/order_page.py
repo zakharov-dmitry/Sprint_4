@@ -41,13 +41,13 @@ class OrderPageSamokat:
         WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(opl.button_further))
         self.driver.find_element(*opl.button_further).click()
 
-    def set_delivery_date_on_6th_next_month(self):
+    def set_delivery_date_on_10th_next_month(self):
         WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(opl.date_field))
         self.driver.find_element(*opl.date_field).click()
         WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(opl.calendar))
         self.driver.find_element(*opl.button_next_month).click()
-        WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(opl.date_6))
-        self.driver.find_element(*opl.date_6).click()
+        WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(opl.date_10))
+        self.driver.find_element(*opl.date_10).click()
 
     def select_rental_period(self, rental_period):
         WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(opl.rental_period_field))
@@ -110,7 +110,4 @@ class OrderPageSamokat:
         self.driver.switch_to.window(next_tab)
         WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(opl.yandex_button_search))
         actual_url = self.driver.current_url
-        print(f"Initial URL -->> {initial_url}")
-        print(f"Yandex_page_url -->> {yandex_page_url}")
-        print(f"Actual_url -->> {actual_url}")
         assert actual_url == yandex_page_url != initial_url

@@ -39,4 +39,7 @@ class MainPageSamokat:
 
     def click_on_2nd_button_order(self):
         WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located(mpl.big_button_order))
-        self.driver.find_element(*mpl.big_button_order).click()
+        big_button_order = self.driver.find_element(*mpl.big_button_order)
+        self.driver.execute_script("arguments[0].scrollIntoView();", big_button_order)
+        WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located(mpl.big_button_order))
+        big_button_order.click()

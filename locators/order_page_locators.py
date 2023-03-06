@@ -7,6 +7,8 @@ address_field = [By.XPATH, ".//input[@placeholder='* Адрес: куда при
 metro_field = [By.XPATH, ".//input[@placeholder='* Станция метро']"]
 metro_item_1 = [By.XPATH, ".//div[@class='select-search__select']//div[text()='Бульвар Рокоссовского']"]
 metro_item_2 = [By.XPATH, ".//div[@class='select-search__select']//div[text()='Черкизовская']"]
+metro_item_3 = [By.XPATH, ".//div[@class='select-search__select']//div[text()='Сокольники']"]
+metro_item_4 = [By.XPATH, ".//div[@class='select-search__select']//div[text()='Красносельская']"]
 phone_field = [By.XPATH, ".//input[@placeholder='* Телефон: на него позвонит курьер']"]
 
 # button to navigate to the second page for ordering
@@ -16,7 +18,7 @@ button_further = [By.XPATH, ".//button[text()='Далее']"]
 date_field = [By.XPATH, ".//input[@placeholder='* Когда привезти самокат']"]
 calendar = [By.XPATH, ".//div[@class='react-datepicker__month-container']"]
 button_next_month = [By.XPATH, ".//button[@aria-label='Next Month']"]
-date_6 = [By.XPATH, ".//div[@class='react-datepicker__day react-datepicker__day--006']"]
+date_10 = [By.XPATH, ".//div[@class='react-datepicker__day react-datepicker__day--010']"]
 
 rental_period_field = [By.XPATH, ".//div[text()='* Срок аренды']"]
 rental_period_dropdown = [By.XPATH, ".//div[@class='Dropdown-root is-open']//div[@class='Dropdown-menu']"]

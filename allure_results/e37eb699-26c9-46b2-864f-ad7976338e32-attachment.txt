@@ -1,3 +1,0 @@
-Initial URL -->> https://qa-scooter.praktikum-services.ru/track?t=735583
-Yandex_page_url -->> https://dzen.ru/?yredirect=true
-Actual_url -->> https://dzen.ru/?yredirect=true
